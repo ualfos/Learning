@@ -1,6 +1,9 @@
-thead {
-    color: #337AB7
+.card-body {
+    align-items: stretch;
 }
-tbody {
-    color: green
+
+.table-responsive {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
 }
