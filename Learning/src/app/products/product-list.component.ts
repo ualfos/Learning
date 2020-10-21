@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit{
     pageTitle: string = 'Product List!';
     imageWidth: number = 50;
     imageMargin: number = 2;
-    showImage: boolean= false;
+    showImage: boolean= true;
     _listFilter: string;
     
     get listFilter():string {
@@ -34,9 +34,7 @@ export class ProductListComponent implements OnInit{
         return this.products.filter((product:IProduct)=> 
         product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
-    toggleImage(): void{
-        this.showImage = !this.showImage;
-    }
+
     ngOnInit(): void {
         this.products = this.productService.getProducts();
         this.filteredProducts= this.products;
