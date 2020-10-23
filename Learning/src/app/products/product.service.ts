@@ -46,6 +46,16 @@ export class ProductService{
                 "price": 11.55,
                 "starRating": 3.7,
                 "imageUrl": "assets/images/saw.png"
+              },
+              {
+                "productId": 10,
+                "productName": "Controller",
+                "productCode": "GMG-0042",
+                "releaseDate": "October 15, 2018",
+                "description": "Standard two-button video game controller",
+                "price": 35.95,
+                "starRating": 4.6,
+                "imageUrl": "assets/images/xbox-controller.png"
               }
         ]
     }

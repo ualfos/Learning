@@ -1,22 +1,25 @@
-<div class='card'>
-    <div class='card-header'>
-    </div>
-    <div class='card-body'>
-        <div class='row'>
-            <div class='col-md-2'>Search:</div>
-            <div class='col-md-4'>
-                <input type='text' [(ngModel)]='listFilter' />
-            </div>
+<div class='shop-body'>
+    <div class='card'>
+        <div id="header">
+            <div id="search-bar">Search:
+                <input type='text' [(ngModel)]='listFilter' /></div>
+            <div> <img class='cart-icon' src="./assets/images/cart.png" (click)="goToCart()"> </div>
+
+        </div>
+        <div class='card-body'>
         </div>
         <div *ngIf='products && products.length' class='table-responsive'>
-            <div  *ngFor='let product of filteredProducts'>
-                <div>
-                    <img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName'
-                        [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+            <div *ngFor='let product of filteredProducts'>
+                <div class='product-card'>
+                    <div class='product-img'> <img *ngIf='showImage' [src]='product.imageUrl'
+                            [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                    </div>
+                    <div class='product-name'>{{product.productName}}</div>
+                    <div class=product-value> {{product.price}}$</div>
+                    <button class='add-btn' (click)="addToCart()"> Add to Cart </button>
+
                 </div>
-                <div>{{product.productName}}</div>
-                <div>{{product.price}}$</div>
-                <button class='btn btn-primary'> Add to Basket </button>
             </div>
         </div>
     </div>
+</div>
