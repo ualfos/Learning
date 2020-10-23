@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {ProductListComponent} from './products/product-list.component'
 import { FormsModule } from '@angular/forms';
-import { ShopComponent } from './shop/shop.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { ShopComponent } from './shop/shop.component';
     NavbarComponent,
     WelcomeComponent,
     ProductListComponent,
-    ShopComponent
+   
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class='shop-body'>
     <div class='card'>
         <div id="header">
-            <div id="search-bar">Search:
+            <div id="search-bar">Cauta:
                 <input type='text' [(ngModel)]='listFilter' /></div>
             <div> <img class='cart-icon' src="./assets/images/cart.png" (click)="goToCart()"> </div>
 
@@ -11,12 +11,10 @@
         <div *ngIf='products && products.length' class='table-responsive'>
             <div *ngFor='let product of filteredProducts'>
                 <div class='product-card'>
-                    <div class='product-img'> <img *ngIf='showImage' [src]='product.imageUrl'
-                            [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
-                    </div>
+                    <div class='product-img'> <img class='images' *ngIf='showImage' [src]='product.imageUrl'> </div>
                     <div class='product-name'>{{product.productName}}</div>
-                    <div class=product-value> {{product.price}}$</div>
-                    <button class='add-btn' (click)="addToCart()"> Add to Cart </button>
+                    <div class=product-value> {{product.price}} lei/bucata</div>
+                    <button class='add-btn' (click)="addToCart()"> Adauga in cos </button>
 
                 </div>
             </div>
